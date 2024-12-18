@@ -1,6 +1,6 @@
--- Extron SW8
+-- Extron 1608xi
 -- by Matty
--- November 2024
+-- December 2024
 
 -- Information block for the plugin
 --[[ #include "info.lua" ]]
@@ -12,7 +12,7 @@ end
 
 -- The name that will initially display when dragged into a design
 function GetPrettyName(props)
-  return "Extron SW8, ver. " .. PluginInfo.Version
+  return "Extron 1608xi, ver. " .. PluginInfo.Version
 end
 
 -- Define User configurable Properties of the plugin

@@ -1,6 +1,14 @@
 -- Aliases
 IPAddress = Controls.IPAddress
 Port = Controls.Port
+n1 = Controls.in1
+n2 = Controls.in2
+n3 = Controls.in3
+n4 = Controls.in4
+n5 = Controls.in5
+n6 = Controls.in6
+n7 = Controls.in7
+n8 = Controls.in8
 
 -- Constants
 EOL = "\r\n"                       -- End of line character as defined in device's API
@@ -13,6 +21,7 @@ sock = TcpSocket.New()
 -- Sends data to the remote device over the TCP socket
   function send(cmd)
        sock:Write(cmd)
+       print(cmd)
  end  
 
 sock.EventHandler = function( sock, evt, err )
@@ -32,14 +41,17 @@ sock.EventHandler = function( sock, evt, err )
   end
 end
 
-
 for insel = 1, 8 do
   Controls["in"..insel].EventHandler = function()
  iInput = tostring(insel)
  sStr = string.format('%s!',iInput)
  send(sStr)
+ print("sent")
  --end
 end
+
+
+
 
 ---------------------  Initialization  -------------------------
 --.init()

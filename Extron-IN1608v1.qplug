@@ -1,14 +1,14 @@
--- Extron SW8
+-- Extron 1608xi
 -- by Matty
--- November 2024
+-- December 2024
 
 -- Information block for the plugin
 
 PluginInfo = {
-  Name = "Matty~Extron~SW8 Switcher",
+  Name = "Matty~Extron~1608xi Switcher",
   Version = "1.0",
-  BuildVersion = "1.0.0.14",
-  Id ="8afdec5b-4a30-4d64-bc01-526bc6e60d7d",
+  BuildVersion = "1.0.0.29",
+  Id ="28d7da79-dc36-4f29-b351-52a0ba99f6cc",
   Author = "Matty",
   Description = "Modular Control of Switcher"
 }
@@ -26,7 +26,7 @@ end
 
 -- The name that will initially display when dragged into a design
 function GetPrettyName(props)
-  return "Extron SW8, ver. " .. PluginInfo.Version
+  return "Extron 1608xi, ver. " .. PluginInfo.Version
 end
 
 -- Define User configurable Properties of the plugin
@@ -150,7 +150,7 @@ function GetControlLayout(props)
     Color = {0,255,127},
     FontSize = 12,
     Style = "Button",
-    ButtonStyle = "Toggle",
+    ButtonStyle = "Trigger",
     Position = {10 + 32 * x, 75},
     Size = {32, 32}
   }
@@ -163,6 +163,14 @@ if  Controls then
   -- Aliases
   IPAddress = Controls.IPAddress
   Port = Controls.Port
+  n1 = Controls.in1
+  n2 = Controls.in2
+  n3 = Controls.in3
+  n4 = Controls.in4
+  n5 = Controls.in5
+  n6 = Controls.in6
+  n7 = Controls.in7
+  n8 = Controls.in8
   
   -- Constants
   EOL = "\r\n"                       -- End of line character as defined in device's API
@@ -175,6 +183,7 @@ if  Controls then
   -- Sends data to the remote device over the TCP socket
     function send(cmd)
          sock:Write(cmd)
+         print(cmd)
    end  
   
   sock.EventHandler = function( sock, evt, err )
@@ -194,14 +203,17 @@ if  Controls then
     end
   end
   
-  
   for insel = 1, 8 do
     Controls["in"..insel].EventHandler = function()
    iInput = tostring(insel)
    sStr = string.format('%s!',iInput)
    send(sStr)
+   print("sent")
    --end
   end
+  
+  
+  
   
   ---------------------  Initialization  -------------------------
   --.init()

@@ -1,9 +1,9 @@
 
 PluginInfo = {
-  Name = "Matty~Extron~SW8 Switcher",
+  Name = "Matty~Extron~1608xi Switcher",
   Version = "1.0",
-  BuildVersion = "1.0.0.14",
-  Id ="8afdec5b-4a30-4d64-bc01-526bc6e60d7d",
+  BuildVersion = "1.0.0.29",
+  Id ="28d7da79-dc36-4f29-b351-52a0ba99f6cc",
   Author = "Matty",
   Description = "Modular Control of Switcher"
 }

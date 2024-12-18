@@ -70,7 +70,7 @@ layout["in".. string.format("%d",x)] = {
   Color = {0,255,127},
   FontSize = 12,
   Style = "Button",
-  ButtonStyle = "Toggle",
+  ButtonStyle = "Trigger",
   Position = {10 + 32 * x, 75},
   Size = {32, 32}
 }
