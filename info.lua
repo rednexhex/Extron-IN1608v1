@@ -1,9 +1,9 @@
 
 PluginInfo = {
-  Name = "Matty~Extron~1608xi Switcher",
+  Name = "Matty~Extron~SSP200 Surround Processor",
   Version = "1.0",
-  BuildVersion = "1.0.0.29",
-  Id ="28d7da79-dc36-4f29-b351-52a0ba99f6cc",
+  BuildVersion = "1.0.0.81",
+  Id ="c1cfe3e7-7e6e-44c4-b776-2561b8b39120",
   Author = "Matty",
   Description = "Modular Control of Switcher"
 }
@@ -12,4 +12,4 @@ esilogo = "--[[ #encode "./images/esi.png" ]]"
 
 sig = "--[[ #encode "./images/MATTY.png" ]]"
 
-print("Any sufficiently advanced technology\x0Dis indistinguishable from magic")
+print("Pay no Attention to the Man behind the Curtain")
